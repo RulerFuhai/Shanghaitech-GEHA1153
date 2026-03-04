@@ -1,0 +1,59 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{ctex}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+
+\begin{document}
+	\begin{tikzpicture}[
+		mindmap,
+		grow cyclic,
+		every node/.style=concept,
+		concept color=blue!40,
+		text=white,
+		level 1/.append style={
+			level distance=6cm,
+			sibling angle=90
+		},
+		level 2/.append style={
+			level distance=3.5cm
+		}
+		]
+		
+		% 中心节点
+		\node{末路英雄的挽歌——《梁父吟》中传统英雄范式的解构与时代命运悲剧的呈现}
+		% 第1个分支：核心概念
+		child[
+		concept color=blue!50
+		] { node {核心概念}
+			child { node {传统英雄范式\\(忠勇仁义、传奇事迹)} }
+			child { node {末路英雄\\(英雄迟暮、失意晚景)} }
+			child { node {时代命运悲剧\\(历史必然、集体象征)} }
+		}
+		% 第2个分支：方法论基础
+		child[
+		concept color=orange!50
+		] { node {方法论基础}
+			child { node {福柯\\(身体政治)} }
+			child { node {詹明信\\(后现代历史意识)} }
+		}
+		% 第3个分支：文本细读
+		child[
+		concept color=red!50
+		] { node {文本细读}
+			child { node {历史叙事与记忆\\(个人/集体记忆)} }
+			child { node {身体政治与\\老年军人} }
+			child { node {英雄话语的\\重构与解构} }
+			child { node {时代悲剧与\\人物命运象征} }
+		}
+		% 第4个分支：结论
+		child[
+		concept color=purple!50
+		] { node {结论}
+			child { node {传统英雄\\范式解构} }
+			child { node {历史与文化\\的反思} }
+			child { node {悲剧意识与\\时代必然} }
+			child { node {白先勇创作\\价值与意义} }
+		};
+		
+	\end{tikzpicture}
+\end{document}
